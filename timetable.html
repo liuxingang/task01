@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的课程表—刘新刚</title>
+    <style type="text/css">
+        th,td
+        {
+            border:1px solid gray;
+            border-radius: 5px;;
+        }
+        table
+        {
+            font-family: sans-serif;
+            font-size: 16px;;
+            margin:200px auto;
+            border:2px solid #1db7fa;
+            border-radius: 10px;
+            border-spacing: 4px;;
+            background: #fff;
+            position: relative;
+
+        }
+        caption
+        {
+            font-size:25px;
+            font-weight: bold;
+            margin-bottom:10px;
+            color:#fb6d03;
+        }
+        td,th
+        {
+            padding:4px 8px;
+            text-align: center;
+            border:1px solid #1db7fa;
+        }
+        th {
+            letter-spacing: 4px;
+            background: #87CEFA;
+            font-size: 18px;
+        }
+
+        .odd td
+        {
+            background: rgba(29,183,250,0.1);
+        }
+        .even td
+        {
+            background: rgba(29,183,250,0.3);
+        }
+        .even1 td{
+            border-radius: 12px;
+            color:#fff;
+            border: 1px solid #fb6d03 ;
+            background:#fb6d03;
+        }
+        .rest
+        {
+            border-radius:15px;
+        color:red;}
+       table:before
+        {
+            content:"";
+            width:200px;
+            height:30px;
+            background:gray;
+            position:absolute;
+           bottom:5px;
+           left:13px;
+           z-index:-1;
+           transform: rotate(-3deg);
+           box-shadow: 0 5px 10px gray;
+        }
+        table:after
+        {
+            content:"";
+            width:200px;
+            height:30px;
+            background:gray;
+            position:absolute;
+            bottom:5px;
+            right:13px;
+            z-index:-1;
+            transform: rotate(3deg);
+            box-shadow: 0 5px 10px gray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>课程表</caption>
+            <tr>
+                <th>项目</th>
+                <th colspan="5">上课</th>
+                <th colspan="2">休息</th>
+            </tr>
+            <tr class="even even1">
+                <th>星期</th>
+                <td>星期一</td>
+                <td>星期二</td>
+                <td>星期三</td>
+                <td>星期四</td>
+                <td>星期五</td>
+                <td>星期六</td>
+                <td>星期天</td>
+            </tr>
+            <tr class="odd">
+                <th rowspan="4">上午</th>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td rowspan="4" class="rest">休息</td>
+            </tr>
+            <tr class="even">
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+                <td>英语</td>
+                <td>语文</td>
+                <td>数学</td>
+            </tr>
+            <tr class="odd">
+                <td>化学</td>
+                <td>数学</td>
+                <td>数学</td>
+                <td>物理</td>
+                <td>生物</td>
+                <td>化学</td>
+            </tr>
+            <tr class="even">
+                <td>物理</td>
+                <td>生物</td>
+                <td>生物</td>
+                <td>体育</td>
+                <td>生物</td>
+                <td>体育</td>
+            </tr>
+            <tr class="odd">
+                <th rowspan="2">下午</th>
+                <td>实验</td>
+                <td>化学</td>
+                <td>生物</td>
+                <td>实验</td>
+                <td>物理</td>
+                <td>化学</td>
+                <td rowspan="2" class="rest">休息</td>
+            </tr>
+            <tr class="even">
+                <td>化学</td>
+                <td>化学</td>
+                <td>生物</td>
+                <td>物理</td>
+                <td>生物</td>
+                <td>化学</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
